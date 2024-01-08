@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals Schedule Viewer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+
+</head>
+<body>
+<h1 class="title">OSU Finals Schedule Viewer</h1>
+<div class="container mt-3">
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="border p-3">
+        <h2>Add Courses for Spring 2024</h2>
+        <form id="add-course-form">
+          <div class="mb-3">
+            <label for="subject-select" class="form-label">Subject:</label>
+            <select class="selectpicker form-control" data-live-search="true" id="subject-select">
+              <option></option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="course-select" class="form-label">Course:</label>
+            <select class="selectpicker form-control" data-live-search="true" id="course-select" disabled>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="section-select" class="form-label">Section:</label>
+            <select class="selectpicker form-control" data-live-search="true" id="section-select" disabled>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary" id="add-btn">Add Course to My Schedule</button>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="col-md-6">
+      <div class="border p-3">
+        <h2>My Schedule</h2>
+        <div id="schedule-list" class="list-group mb-3">
+        </div>
+        <button type="button" class="btn btn-success" id="generate-btn">Generate Finals Schedule</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12">
+      <div class="border p-3" id="calendar">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
